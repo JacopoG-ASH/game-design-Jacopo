@@ -1,0 +1,163 @@
+{
+	"name": "Layout 1",
+	"layers": [
+		{
+			"name": "Layer 0",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "TiledBackground",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 2,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 4000,
+						"height": 2048,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Tilemap",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 64,
+						"tile-height": 64,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 3,
+					"instanceVariables": {},
+					"behaviors": {},
+					"ownData": {
+						"tilemapData": {
+							"width": 62,
+							"height": 32,
+							"max-width": 125,
+							"max-height": 64,
+							"data": "16x1,56x0,50,6x1,57x0,3,5x1,58x0,51,4x1,57x0,2,5x1,17x0,2,2x1,38x0,3,4x1,18x0,3,2x1,38x0,4,3x1,19x0,3,2x1,61x0,3,2x1,61x0,3,2x1,61x0,4,2x1,38x0,9,213x0,2,3x1,40x0,9,19x0,3,3x1,48x0,6,11x0,3,3x1,48x0,7,10x0,24,46,3x1,48x0,3,10x0,3,4x1,38x0,6,9x0,3,10x0,3,4x1,38x0,7,9x0,3,10x0,4,4x1,38x0,7,9x0,3,53x0,7,9x0,3,53x0,7,9x0,4,53x0,7,20x0,9,42x0,8,139x0,9,6x0,6,63x0,7,46x0,30,16x0,7,46x0,3,16x0,8,46x0,3,63x0,3,10x0,30,52x0,31,10x0,31,182x0,52,16x0,5,42x0,52,3x0,53,59x0,53,9x0,30,63x0,31,55x0,30,17x0,5,45x0,31,196x0,6,63x0,7,13x0,52,41x0,9,7x0,7,13x0,3,49x0,7,13x0,3,49x0,7,13x0,3,39x0,9,4x0,9,4x0,7,13x0,3,49x0,7,13x0,3,49x0,8,13x0,3,63x0,53,104x0,9,6x0,9,189x0,9,57x0,9,67x0,9,125x0,9,4154x0"
+						},
+						"tile-width": 64,
+						"tile-height": 64,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 4000,
+						"height": 2048,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 869100705639472,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "PlayerLayer",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 171316951180167,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"sid": 607462111566173,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 4000,
+	"height": 2048,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "Event sheet 1"
+}
