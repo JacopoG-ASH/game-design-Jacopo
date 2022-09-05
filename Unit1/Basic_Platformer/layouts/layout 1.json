@@ -2,7 +2,7 @@
 	"name": "Layout 1",
 	"layers": [
 		{
-			"name": "Layer 0",
+			"name": "Platforms",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
@@ -55,14 +55,21 @@
 					},
 					"uid": 3,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
 					"ownData": {
 						"tilemapData": {
 							"width": 62,
 							"height": 32,
 							"max-width": 125,
 							"max-height": 64,
-							"data": "16x1,56x0,50,6x1,57x0,3,5x1,58x0,51,4x1,57x0,2,5x1,17x0,2,2x1,38x0,3,4x1,18x0,3,2x1,38x0,4,3x1,19x0,3,2x1,61x0,3,2x1,61x0,3,2x1,61x0,4,2x1,38x0,9,213x0,2,3x1,40x0,9,19x0,3,3x1,48x0,6,11x0,3,3x1,48x0,7,10x0,24,46,3x1,48x0,3,10x0,3,4x1,38x0,6,9x0,3,10x0,3,4x1,38x0,7,9x0,3,10x0,4,4x1,38x0,7,9x0,3,53x0,7,9x0,3,53x0,7,9x0,4,53x0,7,20x0,9,42x0,8,139x0,9,6x0,6,63x0,7,46x0,30,16x0,7,46x0,3,16x0,8,46x0,3,63x0,3,10x0,30,52x0,31,10x0,31,182x0,52,16x0,5,42x0,52,3x0,53,59x0,53,9x0,30,63x0,31,55x0,30,17x0,5,45x0,31,196x0,6,63x0,7,13x0,52,41x0,9,7x0,7,13x0,3,49x0,7,13x0,3,49x0,7,13x0,3,39x0,9,4x0,9,4x0,7,13x0,3,49x0,7,13x0,3,49x0,8,13x0,3,63x0,53,104x0,9,6x0,9,189x0,9,57x0,9,67x0,9,125x0,9,4154x0"
+							"data": "16x1,56x0,50,6x1,57x0,3,5x1,58x0,51,4x1,57x0,2,5x1,17x0,2,2x1,38x0,3,4x1,9x0,30,4x0,30,3x0,3,2x1,38x0,4,3x1,10x0,31,4x0,31,3x0,3,2x1,61x0,3,2x1,61x0,3,2x1,61x0,4,2x1,38x0,9,16x0,30,58x0,30,4x0,31,58x0,31,73x0,2,3x1,40x0,9,19x0,3,3x1,48x0,2,11x0,3,3x1,48x0,3,10x0,24,46,3x1,48x0,3,10x0,3,4x1,38x0,6,9x0,3,10x0,3,4x1,38x0,7,9x0,3,10x0,4,4x1,38x0,7,9x0,3,53x0,7,9x0,3,53x0,7,9x0,4,53x0,7,20x0,9,42x0,8,139x0,9,117x0,30,17x0,2,45x0,3,17x0,3,45x0,3,17x0,4,45x0,3,10x0,30,52x0,31,10x0,31,182x0,52,6x0,30,9x0,5,42x0,52,3x0,53,6x0,31,52x0,53,129x0,30,6x0,30,10x0,5,45x0,31,6x0,31,189x0,6,63x0,7,13x0,52,41x0,9,7x0,7,13x0,3,49x0,7,13x0,3,49x0,7,13x0,3,39x0,9,4x0,9,4x0,7,13x0,3,49x0,7,13x0,3,49x0,8,13x0,3,63x0,53,104x0,9,6x0,9,189x0,9,57x0,9,67x0,9,125x0,9,4154x0"
 						},
 						"tile-width": 64,
 						"tile-height": 64,
@@ -120,7 +127,134 @@
 			"name": "PlayerLayer",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "PlayerAnim",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "walk",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 4,
+					"instanceVariables": {},
+					"behaviors": {
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 338,
+						"y": 366,
+						"width": 45,
+						"height": 54,
+						"originX": 0.5,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PlayerBox",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 5,
+					"instanceVariables": {},
+					"behaviors": {
+						"Platform": {
+							"properties": {
+								"max-speed": 330,
+								"acceleration": 1500,
+								"deceleration": 1500,
+								"jump-strength": 650,
+								"gravity": 1500,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": true,
+								"enabled": true
+							}
+						},
+						"ScrollTo": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 396,
+						"y": 351,
+						"width": 48,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Enemy",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 7,
+					"instanceVariables": {},
+					"behaviors": {
+						"Platform": {
+							"properties": {
+								"max-speed": 50,
+								"acceleration": 100,
+								"deceleration": 100,
+								"jump-strength": 650,
+								"gravity": 1500,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": false,
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 1269,
+						"y": 384,
+						"width": 32,
+						"height": 44,
+						"originX": 0.5,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 171316951180167,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
