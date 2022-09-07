@@ -47,6 +47,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"version": "r308",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -98,7 +106,11 @@
 			"Enemy",
 			"EdgeMarker",
 			"Pickup",
-			"txtScore"
+			"txtScore",
+			"Finish",
+			"EndText",
+			"Button",
+			"Death"
 		],
 		"subfolders": []
 	},
@@ -110,13 +122,15 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Game",
+			"End Screen"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Event sheet 1",
+			"Event sheet 2"
 		],
 		"subfolders": []
 	},

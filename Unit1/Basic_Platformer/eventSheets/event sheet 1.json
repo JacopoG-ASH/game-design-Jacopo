@@ -12,6 +12,38 @@
 			"sid": 830817139062754
 		},
 		{
+			"eventType": "variable",
+			"name": "end_text",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 827008398729970
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 782762188062124
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 181102110999878,
+					"parameters": {
+						"variable": "Score",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 394805540869287
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -294,6 +326,15 @@
 									"parameters": {
 										"vector-y": "-550"
 									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 170417033743184,
+									"parameters": {
+										"variable": "Score",
+										"value": "15"
+									}
 								}
 							],
 							"sid": 406923725856898
@@ -317,6 +358,15 @@
 										"on-time": "0.1",
 										"off-time": "0.1",
 										"duration": "1.0"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 263743663673122,
+									"parameters": {
+										"variable": "Score",
+										"value": "10"
 									}
 								}
 							],
@@ -492,6 +542,72 @@
 				}
 			],
 			"sid": 900496656621985
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PlayerBox",
+					"sid": 701102082592741,
+					"parameters": {
+						"object": "Finish"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 491875334898707,
+					"parameters": {
+						"variable": "end_text",
+						"value": "\"YOU WON!\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 222190378802590,
+					"parameters": {
+						"layout": "End Screen"
+					}
+				}
+			],
+			"sid": 313675398350571
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PlayerBox",
+					"sid": 251147738999372,
+					"parameters": {
+						"object": "Death"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 363966148925604,
+					"parameters": {
+						"variable": "end_text",
+						"value": "\"YOU DIED!\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 998985070918900,
+					"parameters": {
+						"layout": "End Screen"
+					}
+				}
+			],
+			"sid": 348374991115771
 		}
 	],
 	"sid": 904423654815720

@@ -1,0 +1,48 @@
+{
+	"name": "Event sheet 2",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 443949344137439
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "EndText",
+					"sid": 903379752453709,
+					"parameters": {
+						"text": "end_text"
+					}
+				}
+			],
+			"sid": 251635605956394
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Button",
+					"sid": 816329979936975
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 102413121620010,
+					"parameters": {
+						"layout": "Game"
+					}
+				}
+			],
+			"sid": 865888628567084
+		}
+	],
+	"sid": 482103574073685
+}
