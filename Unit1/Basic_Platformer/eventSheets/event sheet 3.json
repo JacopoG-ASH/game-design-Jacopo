@@ -1,0 +1,18 @@
+{
+	"name": "Event sheet 3",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap",
+					"objectClass": "Touch",
+					"sid": 510787281151951
+				}
+			],
+			"actions": [],
+			"sid": 147221911348940
+		}
+	],
+	"sid": 509748041428160
+}

@@ -608,6 +608,31 @@
 				}
 			],
 			"sid": 348374991115771
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 135634262630404,
+					"parameters": {
+						"object": "TouchUp"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-vector-y",
+					"objectClass": "PlayerBox",
+					"sid": 296180323686805,
+					"behaviorType": "Platform",
+					"parameters": {
+						"vector-y": "-650"
+					}
+				}
+			],
+			"sid": 425780530907796
 		}
 	],
 	"sid": 904423654815720
