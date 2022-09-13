@@ -1,7 +1,7 @@
 {
-	"name": "TouchUp",
+	"name": "TouchRight3",
 	"plugin-id": "Sprite",
-	"sid": 197509928774324,
+	"sid": 993365392421041,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,20 +11,20 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 319,
+						"height": 237,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5946310,
+						"imageSpriteId": 7146780,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 960828860267742,
-				"name": "Animation 1",
+				"sid": 710061411841272,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

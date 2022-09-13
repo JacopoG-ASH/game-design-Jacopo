@@ -63,6 +63,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r308",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -119,14 +127,13 @@
 			"EndText",
 			"Button",
 			"Death",
-			"TouchView",
 			"Title",
 			"Press",
-			"TouchUp",
+			"Touch",
+			"Mouse",
 			"TouchRight",
-			"TouchDown",
-			"TouchLeft",
-			"Touch"
+			"TouchRight2",
+			"TouchRight3"
 		],
 		"subfolders": []
 	},

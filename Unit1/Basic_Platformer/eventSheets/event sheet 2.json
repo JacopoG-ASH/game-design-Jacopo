@@ -18,6 +18,14 @@
 					"parameters": {
 						"text": "end_text"
 					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "txtScore",
+					"sid": 237872556996648,
+					"parameters": {
+						"text": "\"Score: \" & Score"
+					}
 				}
 			],
 			"sid": 251635605956394

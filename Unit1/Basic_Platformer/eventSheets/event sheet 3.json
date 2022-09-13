@@ -2,16 +2,80 @@
 	"name": "Event sheet 3",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "TouchScreen",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 851986246161136
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-tap",
+					"id": "on-any-touch-start",
 					"objectClass": "Touch",
-					"sid": 510787281151951
+					"sid": 732427328869748
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 843638090434375,
+					"parameters": {
+						"variable": "TouchScreen",
+						"value": "true"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 277018737354808,
+					"parameters": {
+						"layout": "Game"
+					}
+				}
+			],
 			"sid": 147221911348940
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 757430819999227
+				},
+				{
+					"id": "on-any-click",
+					"objectClass": "Mouse",
+					"sid": 694307776253735
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 839996979998522,
+					"parameters": {
+						"layout": "Game"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 375392858043675,
+					"parameters": {
+						"variable": "TouchScreen",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 339676075610317,
+			"isOrBlock": true
 		}
 	],
 	"sid": 509748041428160

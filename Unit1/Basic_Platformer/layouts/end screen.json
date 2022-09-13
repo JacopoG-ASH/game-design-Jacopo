@@ -78,6 +78,48 @@
 							1
 						]
 					}
+				},
+				{
+					"type": "txtScore",
+					"properties": {
+						"text": "Text",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 35,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0.9058823529411765,
+							0.7725490196078432,
+							0.29411764705882354,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 44,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 500,
+						"y": 423,
+						"width": 282,
+						"height": 60,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 911343949735317,

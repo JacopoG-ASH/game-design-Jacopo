@@ -41,7 +41,49 @@
 					}
 				}
 			],
-			"sid": 394805540869287
+			"sid": 394805540869287,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 158444164758299,
+							"parameters": {
+								"variable": "TouchScreen"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "TouchRight",
+							"sid": 268835991482609,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TouchRight2",
+							"sid": 884794141693730,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TouchRight3",
+							"sid": 389383891875315,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 352181206384947
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -615,24 +657,74 @@
 				{
 					"id": "is-touching-object",
 					"objectClass": "Touch",
-					"sid": 135634262630404,
+					"sid": 890599259836759,
 					"parameters": {
-						"object": "TouchUp"
+						"object": "TouchRight3"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-vector-y",
+					"id": "simulate-control",
 					"objectClass": "PlayerBox",
-					"sid": 296180323686805,
+					"sid": 785342709374825,
 					"behaviorType": "Platform",
 					"parameters": {
-						"vector-y": "-650"
+						"control": "jump"
 					}
 				}
 			],
 			"sid": 425780530907796
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 115248016704903,
+					"parameters": {
+						"object": "TouchRight"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "PlayerBox",
+					"sid": 332626851549276,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 809531908652606
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 902461067220987,
+					"parameters": {
+						"object": "TouchRight2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "PlayerBox",
+					"sid": 942758191477820,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 286410921811751
 		}
 	],
 	"sid": 904423654815720

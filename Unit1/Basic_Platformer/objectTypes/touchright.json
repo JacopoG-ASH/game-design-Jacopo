@@ -1,7 +1,7 @@
 {
 	"name": "TouchRight",
 	"plugin-id": "Sprite",
-	"sid": 951460628977992,
+	"sid": 811465538902948,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,20 +11,20 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 319,
+						"height": 237,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5683150,
+						"imageSpriteId": 8749098,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 709630376570437,
-				"name": "Animation 1",
+				"sid": 716819166078282,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
