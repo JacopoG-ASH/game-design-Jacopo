@@ -56,19 +56,19 @@
 						"tooltip": "",
 						"initially-visible": true,
 						"enabled": true,
-						"auto-font-size": true,
+						"auto-font-size": false,
 						"checked": false,
 						"id": "",
-						"class": ""
+						"class": "button"
 					},
 					"uid": 42,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 604,
-						"y": 500,
-						"width": 72,
-						"height": 24,
+						"x": 513,
+						"y": 498,
+						"width": 258.2285809123382,
+						"height": 86,
 						"originX": 0,
 						"originY": 0,
 						"color": [
