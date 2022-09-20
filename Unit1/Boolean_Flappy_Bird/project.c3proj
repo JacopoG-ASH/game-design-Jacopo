@@ -82,7 +82,8 @@
 			"BottomPipe",
 			"TopPipe",
 			"ScoreText",
-			"Sprite"
+			"Sprite",
+			"FoodSprite"
 		],
 		"subfolders": [
 			{
