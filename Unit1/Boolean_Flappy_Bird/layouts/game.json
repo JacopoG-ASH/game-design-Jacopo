@@ -65,6 +65,9 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Flash": {
+							"properties": {}
 						}
 					},
 					"world": {

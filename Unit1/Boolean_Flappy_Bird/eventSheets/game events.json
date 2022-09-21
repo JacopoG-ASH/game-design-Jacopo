@@ -751,9 +751,9 @@
 						{
 							"id": "set-animation",
 							"objectClass": "FoodSprite",
-							"sid": 855022547500169,
+							"sid": 152492686464565,
 							"parameters": {
-								"animation": "\"Apple\"",
+								"animation": "choose(\"Apple\", \"Banana\", \"Ham\")",
 								"from": "beginning"
 							}
 						}
@@ -767,6 +767,22 @@
 									"id": "is-animation-playing",
 									"objectClass": "FoodSprite",
 									"sid": 483176991954749,
+									"parameters": {
+										"animation": "\"Apple\""
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "FoodSprite",
+									"sid": 889364391464639,
+									"parameters": {
+										"animation": "\"Apple\""
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "FoodSprite",
+									"sid": 671538560760651,
 									"parameters": {
 										"animation": "\"Apple\""
 									}
