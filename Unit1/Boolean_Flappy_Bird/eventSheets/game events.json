@@ -849,17 +849,17 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-collision-with-another-object",
+							"id": "is-overlapping-another-object",
 							"objectClass": "FoodSprite",
-							"sid": 442852440824607,
+							"sid": 554036618143796,
 							"parameters": {
 								"object": "BottomPipe"
 							}
 						},
 						{
-							"id": "on-collision-with-another-object",
+							"id": "is-overlapping-another-object",
 							"objectClass": "FoodSprite",
-							"sid": 623863235613920,
+							"sid": 849969670324926,
 							"parameters": {
 								"object": "TopPipe"
 							}
