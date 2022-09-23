@@ -67,6 +67,14 @@
 					],
 					"actions": [
 						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 834131924433292,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						},
+						{
 							"id": "set-text",
 							"objectClass": "ScoreText",
 							"sid": 7981695657209981,
@@ -766,23 +774,7 @@
 								{
 									"id": "is-animation-playing",
 									"objectClass": "FoodSprite",
-									"sid": 483176991954749,
-									"parameters": {
-										"animation": "\"Apple\""
-									}
-								},
-								{
-									"id": "is-animation-playing",
-									"objectClass": "FoodSprite",
-									"sid": 889364391464639,
-									"parameters": {
-										"animation": "\"Apple\""
-									}
-								},
-								{
-									"id": "is-animation-playing",
-									"objectClass": "FoodSprite",
-									"sid": 671538560760651,
+									"sid": 510259499600399,
 									"parameters": {
 										"animation": "\"Apple\""
 									}
@@ -800,6 +792,56 @@
 								}
 							],
 							"sid": 828220367795312
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "FoodSprite",
+									"sid": 512360609004431,
+									"parameters": {
+										"animation": "\"Ham\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "FoodSprite",
+									"sid": 281822274295402,
+									"parameters": {
+										"instance-variable": "PowerUpType",
+										"value": "\"Slow\""
+									}
+								}
+							],
+							"sid": 107929106004394
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "FoodSprite",
+									"sid": 640252971849780,
+									"parameters": {
+										"animation": "\"Banana\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "FoodSprite",
+									"sid": 132154680302625,
+									"parameters": {
+										"instance-variable": "PowerUpType",
+										"value": "\"Points\""
+									}
+								}
+							],
+							"sid": 115261250775873
 						}
 					]
 				},
@@ -887,9 +929,102 @@
 									"id": "destroy",
 									"objectClass": "FoodSprite",
 									"sid": 337121913553105
+								},
+								{
+									"id": "flash",
+									"objectClass": "Bird",
+									"sid": 121344832896918,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "2.0"
+									}
 								}
 							],
 							"sid": 763149082679554
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "FoodSprite",
+									"sid": 869510067983947,
+									"parameters": {
+										"instance-variable": "PowerUpType",
+										"comparison": 0,
+										"value": "\"Slow\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "start-timer",
+									"objectClass": "Bird",
+									"sid": 168368314266324,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "5",
+										"type": "once",
+										"tag": "\"Slow\""
+									}
+								},
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 858974127949792,
+									"parameters": {
+										"time-scale": "0.5"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "FoodSprite",
+									"sid": 107471959353200
+								}
+							],
+							"sid": 647004997498649
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "FoodSprite",
+									"sid": 175486552768517,
+									"parameters": {
+										"instance-variable": "PowerUpType",
+										"comparison": 0,
+										"value": "\"Points\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 551033942564300,
+									"parameters": {
+										"variable": "Score",
+										"value": "10"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "ScoreText",
+									"sid": 904634455090861,
+									"parameters": {
+										"text": "Score"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "FoodSprite",
+									"sid": 744751316240959
+								}
+							],
+							"sid": 465766233158041
 						}
 					]
 				},
@@ -921,9 +1056,28 @@
 				},
 				{
 					"eventType": "block",
-					"conditions": [],
-					"actions": [],
-					"sid": 285496096975580
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "Bird",
+							"sid": 726402395578480,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"Slow\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 233446531037221,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						}
+					],
+					"sid": 373011026293453
 				}
 			],
 			"sid": 298653776108631,
