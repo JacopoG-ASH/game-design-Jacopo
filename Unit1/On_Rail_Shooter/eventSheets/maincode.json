@@ -1378,6 +1378,70 @@
 								}
 							],
 							"sid": 931021053702263
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Bullet",
+									"sid": 876584107386086,
+									"parameters": {
+										"object": "Asteroid"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Bullet",
+									"sid": 333243408791768
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Bullet",
+									"sid": 103870671764847,
+									"parameters": {
+										"object": "SmallHit",
+										"layer": "\"Ship\"",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-z-elevation",
+									"objectClass": "SmallHit",
+									"sid": 892188207569987,
+									"parameters": {
+										"z": "Bullet.ZElevation"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "SmallHit",
+									"sid": 736843090994178,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Asteroid",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": true
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Asteroid",
+									"sid": 110639419365526,
+									"parameters": {
+										"instance-variable": "Health",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 584866953186441
 						}
 					]
 				},
@@ -1823,6 +1887,46 @@
 				0,
 				1
 			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Asteroid Health a Death",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Asteroid",
+							"sid": 356872573345160,
+							"parameters": {
+								"instance-variable": "Health",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Asteroid",
+							"sid": 249092815146408
+						},
+						{
+							"callFunction": "AddToScore",
+							"sid": 598535107657187,
+							"parameters": [
+								"100"
+							]
+						}
+					],
+					"sid": 447218399339535
+				}
+			],
+			"sid": 774891296653713
 		}
 	],
 	"sid": 709657994451558
