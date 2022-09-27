@@ -1576,6 +1576,10 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"eventType": "comment",
+					"text": "Update health text"
+				},
+				{
 					"functionName": "SetHealth",
 					"functionDescription": "",
 					"functionCategory": "",
@@ -1618,6 +1622,10 @@
 					]
 				},
 				{
+					"eventType": "comment",
+					"text": "Creates asteroid periodically"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -1633,10 +1641,10 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 411410352601979,
+							"sid": 697686644536264,
 							"parameters": {
 								"object-to-create": "Asteroid",
-								"layer": "0",
+								"layer": "1",
 								"x": "random(100, 220)",
 								"y": "random(80, 100)",
 								"create-hierarchy": false,
@@ -1644,20 +1652,21 @@
 							}
 						},
 						{
-							"id": "set-instvar-value",
+							"id": "set-z-elevation",
 							"objectClass": "Asteroid",
-							"sid": 482627856284527,
+							"sid": 690807938500772,
 							"parameters": {
-								"instance-variable": "Speed",
-								"value": "random(0.5, 2)"
+								"z": "-100"
 							}
 						},
 						{
-							"id": "set-z-elevation",
+							"id": "set-instvar-value",
 							"objectClass": "Asteroid",
-							"sid": 545325258559980,
+							"sid": 482627856284527,
+							"breakpoint": true,
 							"parameters": {
-								"z": "-100"
+								"instance-variable": "Speed",
+								"value": "random(0.5, 2)"
 							}
 						}
 					],
@@ -1692,12 +1701,21 @@
 								{
 									"id": "is-between-values",
 									"objectClass": "System",
-									"sid": 127567344816209,
+									"sid": 738272848826227,
 									"parameters": {
 										"value": "Ship.ZElevation",
-										"lower-bound": "Asteroid.ZElevation-5",
-										"upper-bound": "Asteroid.ZElevation+5"
+										"lower-bound": "Asteroid.ZElevation-1",
+										"upper-bound": "Asteroid.ZElevation+1"
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Ship",
+									"sid": 424267640299518,
+									"parameters": {
+										"instance-variable": "Invincibility"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -1722,6 +1740,26 @@
 								{
 									"callFunction": "SetHealth",
 									"sid": 307559148487851
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "Ship",
+									"sid": 101356668202498,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "2",
+										"type": "once",
+										"tag": "\"Invincibility\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Ship",
+									"sid": 117459177224540,
+									"parameters": {
+										"instance-variable": "Invincibility",
+										"value": "true"
+									}
 								}
 							],
 							"sid": 595244809872645
@@ -1750,6 +1788,32 @@
 						}
 					],
 					"sid": 242297853685714
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "Ship",
+							"sid": 582124046158987,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"Invincibility\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Ship",
+							"sid": 630181999794780,
+							"parameters": {
+								"instance-variable": "Invincibility",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 863106821765674
 				}
 			],
 			"sid": 703677530361462,

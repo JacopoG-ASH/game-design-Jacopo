@@ -85,7 +85,8 @@
 					"uid": 4,
 					"instanceVariables": {
 						"Speed": 0,
-						"Health": 10
+						"Health": 10,
+						"Invincibility": false
 					},
 					"behaviors": {
 						"Tween": {

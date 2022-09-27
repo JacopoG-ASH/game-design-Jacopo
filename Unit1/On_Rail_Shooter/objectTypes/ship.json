@@ -9,6 +9,12 @@
 			"type": "number",
 			"desc": "",
 			"sid": 391935741726921
+		},
+		{
+			"name": "Invincibility",
+			"type": "boolean",
+			"desc": "",
+			"sid": 824864625420055
 		}
 	],
 	"behaviorTypes": [
@@ -39,7 +45,7 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
-						"exportFormat": "png",
+						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"imageSpriteId": 9863283,
 						"collisionPoly": {
@@ -96,7 +102,7 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
-						"exportFormat": "png",
+						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"imageSpriteId": 548498,
 						"collisionPoly": {
@@ -142,7 +148,7 @@
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
-						"exportFormat": "png",
+						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"imageSpriteId": 4996684,
 						"collisionPoly": {
