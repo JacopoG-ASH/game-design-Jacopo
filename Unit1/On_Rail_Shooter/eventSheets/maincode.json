@@ -1806,6 +1806,10 @@
 									"sid": 307559148487851
 								},
 								{
+									"type": "comment",
+									"text": "Give temporary invincibility to prevent further damage"
+								},
+								{
 									"id": "start-timer",
 									"objectClass": "Ship",
 									"sid": 101356668202498,
@@ -1895,6 +1899,10 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "comment",
+					"text": "destroy asteroid and add score on death of asteroid"
+				},
 				{
 					"eventType": "block",
 					"conditions": [
