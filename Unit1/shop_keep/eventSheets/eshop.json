@@ -366,7 +366,218 @@
 			"title": "Dialogues",
 			"description": "",
 			"isActiveOnStart": true,
-			"children": [],
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Function creates dialogue box with text"
+				},
+				{
+					"functionName": "dialogue_box",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "line",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 298194308292335
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 377581662882132,
+							"parameters": {
+								"object-to-create": "DialogueBox",
+								"layer": "\"Dialogue\"",
+								"x": "10",
+								"y": "180",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 175498737211187,
+							"parameters": {
+								"object-to-create": "Dialogue_Arrow",
+								"layer": "\"Dialogue\"",
+								"x": "DialogueBox.BBoxRight - 10",
+								"y": "DialogueBox.BBoxBottom - 8",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 333175133132037,
+							"parameters": {
+								"object-to-create": "SpriteFont_Dialogue",
+								"layer": "\"Dialogue\"",
+								"x": "DialogueBox.X + 2",
+								"y": "DialogueBox.Y + 5",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont_Dialogue",
+							"sid": 551015562513415,
+							"parameters": {
+								"text": "line"
+							}
+						}
+					],
+					"sid": 838253703830812
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "dialogue_trigger",
+							"sid": 893056489297949,
+							"parameters": {
+								"object": "Player_Base"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 949306901298700,
+							"parameters": {
+								"object-to-create": "Item_Arrow",
+								"layer": "\"Objects\"",
+								"x": "dialogue_trigger.X",
+								"y": "dialogue_trigger.Y - 30",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "dialogue_trigger",
+							"sid": 403074703689798,
+							"parameters": {
+								"instance-variable": "Event",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 803541572391409
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "dialogue_trigger",
+							"sid": 752295323961086,
+							"parameters": {
+								"object": "Player_Base"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Item_Arrow",
+							"sid": 314418282012463
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "dialogue_trigger",
+							"sid": 874263777129667,
+							"parameters": {
+								"instance-variable": "Event",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 182320877432315
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 963507600863471,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [],
+					"sid": 223776184699029,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "dialogue_trigger",
+									"sid": 914427727256848,
+									"parameters": {
+										"instance-variable": "Event"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "dialogue_box",
+									"sid": 272056599415226,
+									"parameters": [
+										"dialogue_trigger.Line"
+									]
+								}
+							],
+							"sid": 573104938377330
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 728073847074370
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "DialogueBox",
+									"sid": 928246550150943
+								},
+								{
+									"id": "destroy",
+									"objectClass": "SpriteFont_Dialogue",
+									"sid": 663290182674955
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Dialogue_Arrow",
+									"sid": 632449312985884
+								}
+							],
+							"sid": 161136933406106
+						}
+					]
+				}
+			],
 			"sid": 826736847142313,
 			"background-color": [
 				0.4392156862745098,

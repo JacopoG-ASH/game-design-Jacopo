@@ -60,6 +60,198 @@
 						],
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "dialogue_trigger",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 3,
+					"instanceVariables": {
+						"Event": false,
+						"Line": "\"Golden Sword\""
+					},
+					"behaviors": {},
+					"world": {
+						"x": 107.79888705577169,
+						"y": 122.64017392041609,
+						"width": 25.810016622467103,
+						"height": 27.35851271874195,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "dialogue_trigger",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 5,
+					"instanceVariables": {
+						"Event": false,
+						"Line": "\"Totem of Undeath\""
+					},
+					"behaviors": {},
+					"world": {
+						"x": 84.2140772995259,
+						"y": 156.02059103418517,
+						"width": 71.49739478096396,
+						"height": 13.787887009698373,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.283049257578747,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "dialogue_trigger",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 6,
+					"instanceVariables": {
+						"Event": false,
+						"Line": "\"Shovel Sword\""
+					},
+					"behaviors": {},
+					"world": {
+						"x": 139.66741272958626,
+						"y": 124.00659586916026,
+						"width": 25.810016622467103,
+						"height": 32.026508240514175,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.283049257578747,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "dialogue_trigger",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 7,
+					"instanceVariables": {
+						"Event": false,
+						"Line": "\"The non-visibility cloak\""
+					},
+					"behaviors": {},
+					"world": {
+						"x": 173.77337546805722,
+						"y": 126.05990529045069,
+						"width": 25.810016622467103,
+						"height": 33.78339925670826,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.283049257578747,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "dialogue_trigger",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 11,
+					"instanceVariables": {
+						"Event": false,
+						"Line": "\"The non-invisible cloak\""
+					},
+					"behaviors": {},
+					"world": {
+						"x": 202.71329343931492,
+						"y": 124.6152064578005,
+						"width": 25.810016622467103,
+						"height": 30.26419779860123,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.283049257578747,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "dialogue_trigger",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 14,
+					"instanceVariables": {
+						"Event": false,
+						"Line": "\"Avi's Heart\""
+					},
+					"behaviors": {},
+					"world": {
+						"x": 227.74830136983968,
+						"y": 157.90418405742622,
+						"width": 74.73771387948304,
+						"height": 14.15137557875382,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.283049257578747,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 920728592196052,
