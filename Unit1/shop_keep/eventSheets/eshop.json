@@ -441,6 +441,10 @@
 					"sid": 838253703830812
 				},
 				{
+					"eventType": "comment",
+					"text": "Checks if player is overlapping dialogue trigger"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -453,6 +457,10 @@
 						}
 					],
 					"actions": [
+						{
+							"type": "comment",
+							"text": "create arrow on item"
+						},
 						{
 							"id": "create-object",
 							"objectClass": "System",
@@ -536,16 +544,70 @@
 									}
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 573104938377330,
+							"children": [
 								{
-									"callFunction": "dialogue_box",
-									"sid": 272056599415226,
-									"parameters": [
-										"dialogue_trigger.Line"
-									]
+									"eventType": "comment",
+									"text": "makes removes dialogue box if dialogue box is on screen"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "DialogueBox",
+											"sid": 866400936625057
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "DialogueBox",
+											"sid": 928246550150943
+										},
+										{
+											"id": "destroy",
+											"objectClass": "SpriteFont_Dialogue",
+											"sid": 663290182674955
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Dialogue_Arrow",
+											"sid": 632449312985884
+										}
+									],
+									"sid": 118233318508263
+								},
+								{
+									"eventType": "comment",
+									"text": "If no dialogue box is on screen, creates one"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 338938699669637
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "dialogue_box",
+											"sid": 272056599415226,
+											"parameters": [
+												"dialogue_trigger.Line"
+											]
+										}
+									],
+									"sid": 672873588538911
 								}
-							],
-							"sid": 573104938377330
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "Removes dialogue box if not colliding with dialogue trigger"
 						},
 						{
 							"eventType": "block",
@@ -560,17 +622,17 @@
 								{
 									"id": "destroy",
 									"objectClass": "DialogueBox",
-									"sid": 928246550150943
+									"sid": 971922221241970
 								},
 								{
 									"id": "destroy",
 									"objectClass": "SpriteFont_Dialogue",
-									"sid": 663290182674955
+									"sid": 835406518128121
 								},
 								{
 									"id": "destroy",
 									"objectClass": "Dialogue_Arrow",
-									"sid": 632449312985884
+									"sid": 369062204365370
 								}
 							],
 							"sid": 161136933406106
