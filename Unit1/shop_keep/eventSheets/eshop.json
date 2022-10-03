@@ -430,11 +430,16 @@
 							}
 						},
 						{
-							"id": "set-text",
+							"type": "comment",
+							"text": "initiates typewriter that writes at speed of 0.075 seconds per character"
+						},
+						{
+							"id": "typewriter-text",
 							"objectClass": "SpriteFont_Dialogue",
-							"sid": 551015562513415,
+							"sid": 856277998805753,
 							"parameters": {
-								"text": "line"
+								"text": "line",
+								"duration": "len(line) * 0.075"
 							}
 						}
 					],
@@ -501,6 +506,10 @@
 					],
 					"actions": [
 						{
+							"type": "comment",
+							"text": "destroys arrow if player leaves dialogue trigger"
+						},
+						{
 							"id": "destroy",
 							"objectClass": "Item_Arrow",
 							"sid": 314418282012463
@@ -560,24 +569,58 @@
 											"sid": 866400936625057
 										}
 									],
-									"actions": [
+									"actions": [],
+									"sid": 118233318508263,
+									"children": [
 										{
-											"id": "destroy",
-											"objectClass": "DialogueBox",
-											"sid": 928246550150943
+											"eventType": "comment",
+											"text": "interrupts if typewriter text is running"
 										},
 										{
-											"id": "destroy",
-											"objectClass": "SpriteFont_Dialogue",
-											"sid": 663290182674955
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-running-typewriter-text",
+													"objectClass": "SpriteFont_Dialogue",
+													"sid": 400660947280845
+												}
+											],
+											"actions": [],
+											"sid": 586819403598893
 										},
 										{
-											"id": "destroy",
-											"objectClass": "Dialogue_Arrow",
-											"sid": 632449312985884
+											"eventType": "comment",
+											"text": "if typewriter text ended, destroy textbox"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 750350080868590
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "DialogueBox",
+													"sid": 928246550150943
+												},
+												{
+													"id": "destroy",
+													"objectClass": "SpriteFont_Dialogue",
+													"sid": 663290182674955
+												},
+												{
+													"id": "destroy",
+													"objectClass": "Dialogue_Arrow",
+													"sid": 632449312985884
+												}
+											],
+											"sid": 357014802776403
 										}
-									],
-									"sid": 118233318508263
+									]
 								},
 								{
 									"eventType": "comment",
@@ -604,6 +647,28 @@
 									"sid": 672873588538911
 								}
 							]
+						},
+						{
+							"eventType": "comment",
+							"text": "jump to end of typewriter text if typewriter running and space is pressed"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-running-typewriter-text",
+									"objectClass": "SpriteFont_Dialogue",
+									"sid": 319755561911668
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-finish",
+									"objectClass": "SpriteFont_Dialogue",
+									"sid": 601970582825496
+								}
+							],
+							"sid": 394789705401434
 						},
 						{
 							"eventType": "comment",
