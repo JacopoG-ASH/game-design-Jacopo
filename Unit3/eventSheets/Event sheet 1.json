@@ -1,0 +1,248 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Lane1",
+			"type": "number",
+			"initialValue": "70",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 140743315293609
+		},
+		{
+			"eventType": "variable",
+			"name": "Lane2",
+			"type": "number",
+			"initialValue": "206",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 460696759819798
+		},
+		{
+			"eventType": "variable",
+			"name": "Lane3",
+			"type": "number",
+			"initialValue": "342",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 772764974298657
+		},
+		{
+			"eventType": "variable",
+			"name": "Touch_Start",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 534439465454091
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 857662732820445,
+					"parameters": {
+						"key": 37
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 561507832916686,
+					"parameters": {
+						"first-value": "PlayerBox.X",
+						"comparison": 4,
+						"second-value": "200"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-at-angle",
+					"objectClass": "PlayerBox",
+					"sid": 783172989961149,
+					"parameters": {
+						"angle": "180",
+						"distance": "136"
+					}
+				}
+			],
+			"sid": 416148446488761
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 734670387059195,
+					"parameters": {
+						"key": 39
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 214958405061581,
+					"parameters": {
+						"first-value": "PlayerBox.X",
+						"comparison": 2,
+						"second-value": "250"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-at-angle",
+					"objectClass": "PlayerBox",
+					"sid": 560569045624424,
+					"parameters": {
+						"angle": "0",
+						"distance": "136"
+					}
+				}
+			],
+			"sid": 229375834731744
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-start",
+					"objectClass": "Touch",
+					"sid": 281085892382038
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 354555440263523,
+					"parameters": {
+						"variable": "Touch_Start",
+						"value": "Touch.AbsoluteX"
+					}
+				}
+			],
+			"sid": 653358879910480
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 146492205320473
+				}
+			],
+			"actions": [],
+			"sid": 560265589836254,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 824039673170412,
+							"parameters": {
+								"variable": "Touch_Start",
+								"comparison": 4,
+								"value": "Touch.AbsoluteX"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 361388913263194,
+							"parameters": {
+								"first-value": "PlayerBox.X",
+								"comparison": 4,
+								"second-value": "200"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-at-angle",
+							"objectClass": "PlayerBox",
+							"sid": 720750082002094,
+							"parameters": {
+								"angle": "180",
+								"distance": "136"
+							}
+						}
+					],
+					"sid": 952841043857183
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 346666513516806,
+							"parameters": {
+								"variable": "Touch_Start",
+								"comparison": 2,
+								"value": "Touch.AbsoluteX"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 345217491794825,
+							"parameters": {
+								"first-value": "PlayerBox.X",
+								"comparison": 2,
+								"second-value": "250"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-at-angle",
+							"objectClass": "PlayerBox",
+							"sid": 721246426267746,
+							"parameters": {
+								"angle": "0",
+								"distance": "136"
+							}
+						}
+					],
+					"sid": 408565188988742
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 401627613287846
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Player_Animation",
+					"sid": 519920987336587,
+					"parameters": {
+						"x": "PlayerBox.X",
+						"y": "PlayerBox.Y"
+					}
+				}
+			],
+			"sid": 806513863724143
+		}
+	],
+	"sid": 702960562609309
+}
