@@ -51,6 +51,14 @@
 				],
 				"subfolders": [],
 				"name": "Input"
+			},
+			{
+				"items": [
+					"Apple",
+					"Syringe"
+				],
+				"subfolders": [],
+				"name": "Items"
 			}
 		]
 	},
@@ -62,7 +70,7 @@
 	},
 	"layouts": {
 		"items": [
-			"Menu"
+			"Game"
 		],
 		"subfolders": []
 	},
