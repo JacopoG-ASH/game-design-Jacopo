@@ -38,37 +38,7 @@
 			"name": "ItemLayer",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [
-				{
-					"type": "Syringe",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 7,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 206,
-						"y": 470,
-						"width": 67.5,
-						"height": 67.5,
-						"originX": 0.47619047619047616,
-						"originY": 0.47619047619047616,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				}
-			],
+			"instances": [],
 			"sid": 708678872928442,
 			"effectTypes": [],
 			"isInitiallyVisible": true,

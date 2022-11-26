@@ -288,31 +288,37 @@
 					}
 				}
 			],
-			"sid": 898932081783582,
-			"children": [
+			"sid": 898932081783582
+		},
+		{
+			"eventType": "block",
+			"conditions": [
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 210433465689270,
-							"parameters": {
-								"first-value": "floor(random(2))",
-								"comparison": 0,
-								"second-value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"callFunction": "SpawnSyringe",
-							"sid": 727180757249925
-						}
-					],
-					"sid": 236573804426183
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 899494113192443,
+					"parameters": {
+						"interval-seconds": "Speed "
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 656410042327582,
+					"parameters": {
+						"first-value": "floor(random(4))",
+						"comparison": 0,
+						"second-value": "0"
+					}
 				}
-			]
+			],
+			"actions": [
+				{
+					"callFunction": "SpawnSyringe",
+					"sid": 494217393324593
+				}
+			],
+			"sid": 562926358984604
 		},
 		{
 			"eventType": "block",
