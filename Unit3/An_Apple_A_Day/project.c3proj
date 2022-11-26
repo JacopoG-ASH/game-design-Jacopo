@@ -1,15 +1,66 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 31700,
+	"savedWithRelease": 31702,
 	"name": "An Apple A Day",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
-	"usedAddons": [],
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		}
+	],
 	"uniqueId": "jx1skek3czo",
 	"objectTypes": {
 		"items": [],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Player_Animation",
+					"Player_Static",
+					"PlayerBox"
+				],
+				"subfolders": [],
+				"name": "Player"
+			},
+			{
+				"items": [
+					"Keyboard",
+					"Touch"
+				],
+				"subfolders": [],
+				"name": "Input"
+			},
+			{
+				"items": [
+					"Apple",
+					"Syringe"
+				],
+				"subfolders": [],
+				"name": "Items"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
@@ -19,7 +70,7 @@
 	},
 	"layouts": {
 		"items": [
-			"Menu"
+			"Game"
 		],
 		"subfolders": []
 	},
