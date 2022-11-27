@@ -330,61 +330,83 @@
 					"parameters": {
 						"interval-seconds": "Speed"
 					}
+				}
+			],
+			"actions": [],
+			"sid": 520101992482974,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 111351956048804,
+							"parameters": {
+								"object": "Syringe"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Syringe",
+							"sid": 355846439837088,
+							"parameters": {
+								"x": "Self.x",
+								"y": "Self.y + 80"
+							}
+						}
+					],
+					"sid": 526204479893845
 				},
 				{
-					"id": "for-each",
-					"objectClass": "System",
-					"sid": 258711213042913,
-					"parameters": {
-						"object": "Apple"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 150015122330975,
+							"parameters": {
+								"object": "Apple"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Apple",
+							"sid": 517611635733893,
+							"parameters": {
+								"x": "Self.x",
+								"y": "Self.y + 80"
+							}
+						}
+					],
+					"sid": 251577874600547,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-screen",
+									"objectClass": "Apple",
+									"sid": 799650524517616,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Apple",
+									"sid": 573856448976185
+								}
+							],
+							"sid": 805698854249268
+						}
+					]
 				}
-			],
-			"actions": [
-				{
-					"id": "set-position",
-					"objectClass": "Apple",
-					"sid": 517611635733893,
-					"parameters": {
-						"x": "Self.x",
-						"y": "Self.y + 80"
-					}
-				}
-			],
-			"sid": 520101992482974
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 594109961948742,
-					"parameters": {
-						"interval-seconds": "Speed"
-					}
-				},
-				{
-					"id": "for-each",
-					"objectClass": "System",
-					"sid": 121125008860625,
-					"parameters": {
-						"object": "Syringe"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-position",
-					"objectClass": "Syringe",
-					"sid": 287811282364557,
-					"parameters": {
-						"x": "Self.x",
-						"y": "Self.y + 80"
-					}
-				}
-			],
-			"sid": 783640575809049
+			]
 		},
 		{
 			"eventType": "block",
