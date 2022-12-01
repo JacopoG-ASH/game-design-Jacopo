@@ -52,6 +52,16 @@
 			"sid": 296705921990787
 		},
 		{
+			"eventType": "variable",
+			"name": "Smoothness",
+			"type": "number",
+			"initialValue": "4",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 357577797889992
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -286,9 +296,62 @@
 					"parameters": {
 						"scale": "2.5"
 					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 661322104060487,
+					"parameters": {
+						"time-scale": "roundToDp(timescale + 0.02, 2)"
+					}
 				}
 			],
 			"sid": 898932081783582
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 103300003361025,
+					"parameters": {
+						"interval-seconds": "Speed * 4"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 482778520549896,
+					"parameters": {
+						"variable": "Speed",
+						"comparison": 5,
+						"value": "0.25"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 306167744278089,
+					"parameters": {
+						"variable": "Speed",
+						"value": "0.01"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 220877634585698,
+					"parameters": {
+						"variable": "Speed",
+						"value": "roundToDp(Speed, 2)"
+					}
+				}
+			],
+			"sid": 468018458962197,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -326,9 +389,9 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 776133200336680,
+					"sid": 119635985575035,
 					"parameters": {
-						"interval-seconds": "Speed"
+						"interval-seconds": "Speed/Smoothness"
 					}
 				}
 			],
@@ -351,10 +414,10 @@
 						{
 							"id": "set-position",
 							"objectClass": "Syringe",
-							"sid": 355846439837088,
+							"sid": 856874052371220,
 							"parameters": {
 								"x": "Self.x",
-								"y": "Self.y + 80"
+								"y": "Self.y + 80 / Smoothness"
 							}
 						}
 					],
@@ -376,10 +439,10 @@
 						{
 							"id": "set-position",
 							"objectClass": "Apple",
-							"sid": 517611635733893,
+							"sid": 147334360130334,
 							"parameters": {
 								"x": "Self.x",
-								"y": "Self.y + 80"
+								"y": "Self.y + 80 / Smoothness"
 							}
 						}
 					],
@@ -513,12 +576,34 @@
 						},
 						{
 							"callFunction": "SpawnSyringe",
-							"sid": 672534846868132
+							"sid": 672534846868132,
+							"disabled": true
 						}
 					],
 					"sid": 619268607029247
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Apple",
+					"sid": 218022067695894,
+					"parameters": {
+						"object": "Syringe"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Syringe",
+					"sid": 504452022330811
+				}
+			],
+			"sid": 927522758251478
 		}
 	],
 	"sid": 702960562609309
