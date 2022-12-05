@@ -65,6 +65,80 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 990366597157191
+				}
+			],
+			"actions": [
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 121110822666312,
+					"parameters": {
+						"time-scale": "0"
+					}
+				}
+			],
+			"sid": 567888168424107
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Button",
+					"sid": 907361080845034
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Title",
+					"sid": 880708201183676,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Button",
+					"sid": 761895227788367,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Player_Static",
+					"sid": 594891960652433,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Player_Animation",
+					"sid": 209029568120250,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 881982116223465,
+					"parameters": {
+						"time-scale": "1.0"
+					}
+				}
+			],
+			"sid": 204868023239304
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-key-pressed",
 					"objectClass": "Keyboard",
 					"sid": 857662732820445,

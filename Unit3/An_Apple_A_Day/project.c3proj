@@ -29,11 +29,30 @@
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "jx1skek3czo",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"Title",
+			"Button"
+		],
 		"subfolders": [
 			{
 				"items": [
@@ -163,7 +182,16 @@
 			"subfolders": []
 		},
 		"general": {
-			"items": [],
+			"items": [
+				{
+					"name": "file.css",
+					"type": "text/css",
+					"sid": 343405412174809,
+					"file-info": {
+						"purpose": "stylesheet"
+					}
+				}
+			],
 			"subfolders": []
 		}
 	},
