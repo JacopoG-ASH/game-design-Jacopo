@@ -45,13 +45,30 @@
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "jx1skek3czo",
 	"objectTypes": {
 		"items": [
 			"Title",
-			"Button"
+			"Button",
+			"TiledBackground"
 		],
 		"subfolders": [
 			{

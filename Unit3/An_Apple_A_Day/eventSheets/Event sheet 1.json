@@ -62,25 +62,14 @@
 			"sid": 357577797889992
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 990366597157191
-				}
-			],
-			"actions": [
-				{
-					"id": "set-time-scale",
-					"objectClass": "System",
-					"sid": 121110822666312,
-					"parameters": {
-						"time-scale": "0"
-					}
-				}
-			],
-			"sid": 567888168424107
+			"eventType": "variable",
+			"name": "GameEnabled",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 985605236032721
 		},
 		{
 			"eventType": "block",
@@ -131,6 +120,14 @@
 					"parameters": {
 						"time-scale": "1.0"
 					}
+				},
+				{
+					"id": "toggle-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 242627315346997,
+					"parameters": {
+						"variable": "GameEnabled"
+					}
 				}
 			],
 			"sid": 204868023239304
@@ -139,123 +136,32 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 857662732820445,
-					"parameters": {
-						"key": 37
-					}
-				},
-				{
-					"id": "compare-two-values",
+					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 561507832916686,
+					"sid": 220263925460166,
 					"parameters": {
-						"first-value": "PlayerBox.X",
-						"comparison": 4,
-						"second-value": "200"
+						"variable": "GameEnabled"
 					}
-				}
-			],
-			"actions": [
-				{
-					"id": "move-at-angle",
-					"objectClass": "PlayerBox",
-					"sid": 783172989961149,
-					"parameters": {
-						"angle": "180",
-						"distance": "136"
-					}
-				}
-			],
-			"sid": 416148446488761
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 734670387059195,
-					"parameters": {
-						"key": 39
-					}
-				},
-				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 214958405061581,
-					"parameters": {
-						"first-value": "PlayerBox.X",
-						"comparison": 2,
-						"second-value": "250"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "move-at-angle",
-					"objectClass": "PlayerBox",
-					"sid": 560569045624424,
-					"parameters": {
-						"angle": "0",
-						"distance": "136"
-					}
-				}
-			],
-			"sid": 229375834731744
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-any-touch-start",
-					"objectClass": "Touch",
-					"sid": 281085892382038
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 354555440263523,
-					"parameters": {
-						"variable": "Touch_Start",
-						"value": "Touch.AbsoluteX"
-					}
-				}
-			],
-			"sid": 653358879910480
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-any-touch-end",
-					"objectClass": "Touch",
-					"sid": 146492205320473
 				}
 			],
 			"actions": [],
-			"sid": 560265589836254,
+			"sid": 707772996067295,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 824039673170412,
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 441773157307477,
 							"parameters": {
-								"variable": "Touch_Start",
-								"comparison": 4,
-								"value": "Touch.AbsoluteX"
+								"key": 37
 							}
 						},
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 361388913263194,
+							"sid": 600179499987936,
 							"parameters": {
 								"first-value": "PlayerBox.X",
 								"comparison": 4,
@@ -267,32 +173,30 @@
 						{
 							"id": "move-at-angle",
 							"objectClass": "PlayerBox",
-							"sid": 720750082002094,
+							"sid": 436941687260989,
 							"parameters": {
 								"angle": "180",
 								"distance": "136"
 							}
 						}
 					],
-					"sid": 952841043857183
+					"sid": 332623892616114
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 346666513516806,
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 954669027717419,
 							"parameters": {
-								"variable": "Touch_Start",
-								"comparison": 2,
-								"value": "Touch.AbsoluteX"
+								"key": 39
 							}
 						},
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 345217491794825,
+							"sid": 178153263836351,
 							"parameters": {
 								"first-value": "PlayerBox.X",
 								"comparison": 2,
@@ -304,206 +208,397 @@
 						{
 							"id": "move-at-angle",
 							"objectClass": "PlayerBox",
-							"sid": 721246426267746,
+							"sid": 423724172025336,
 							"parameters": {
 								"angle": "0",
 								"distance": "136"
 							}
 						}
 					],
-					"sid": 408565188988742
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 401627613287846
-				}
-			],
-			"actions": [
-				{
-					"id": "set-position",
-					"objectClass": "Player_Animation",
-					"sid": 519920987336587,
-					"parameters": {
-						"x": "PlayerBox.X",
-						"y": "PlayerBox.Y"
-					}
-				}
-			],
-			"sid": 806513863724143
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 297489352083268,
-					"parameters": {
-						"interval-seconds": "Speed * 2"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 799595073645373,
-					"parameters": {
-						"object-to-create": "Apple",
-						"layer": "1",
-						"x": "choose(Lane1, Lane2, Lane3)",
-						"y": "-43.5",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
+					"sid": 140353131283685
 				},
-				{
-					"id": "set-scale",
-					"objectClass": "Apple",
-					"sid": 252124176842460,
-					"parameters": {
-						"scale": "2.5"
-					}
-				},
-				{
-					"id": "set-time-scale",
-					"objectClass": "System",
-					"sid": 661322104060487,
-					"parameters": {
-						"time-scale": "roundToDp(timescale + 0.02, 2)"
-					}
-				}
-			],
-			"sid": 898932081783582
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 103300003361025,
-					"parameters": {
-						"interval-seconds": "Speed * 4"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 482778520549896,
-					"parameters": {
-						"variable": "Speed",
-						"comparison": 5,
-						"value": "0.25"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "subtract-from-eventvar",
-					"objectClass": "System",
-					"sid": 306167744278089,
-					"parameters": {
-						"variable": "Speed",
-						"value": "0.01"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 220877634585698,
-					"parameters": {
-						"variable": "Speed",
-						"value": "roundToDp(Speed, 2)"
-					}
-				}
-			],
-			"sid": 468018458962197,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 899494113192443,
-					"parameters": {
-						"interval-seconds": "Speed "
-					}
-				},
-				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 656410042327582,
-					"parameters": {
-						"first-value": "floor(random(4))",
-						"comparison": 0,
-						"second-value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"callFunction": "SpawnSyringe",
-					"sid": 494217393324593
-				}
-			],
-			"sid": 562926358984604
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 119635985575035,
-					"parameters": {
-						"interval-seconds": "Speed/Smoothness"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 520101992482974,
-			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "for-each",
+							"id": "on-any-touch-start",
+							"objectClass": "Touch",
+							"sid": 524504217780572
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 111351956048804,
+							"sid": 886025447064202,
 							"parameters": {
-								"object": "Syringe"
+								"variable": "Touch_Start",
+								"value": "Touch.AbsoluteX"
 							}
+						}
+					],
+					"sid": 223685026707691
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-touch-end",
+							"objectClass": "Touch",
+							"sid": 395427424302738
+						}
+					],
+					"actions": [],
+					"sid": 572204891617786,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 785761844236152,
+									"parameters": {
+										"variable": "Touch_Start",
+										"comparison": 4,
+										"value": "Touch.AbsoluteX"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 672376795135737,
+									"parameters": {
+										"first-value": "PlayerBox.X",
+										"comparison": 4,
+										"second-value": "200"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "move-at-angle",
+									"objectClass": "PlayerBox",
+									"sid": 185385651382636,
+									"parameters": {
+										"angle": "180",
+										"distance": "136"
+									}
+								}
+							],
+							"sid": 651969319208013
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 407029405199722,
+									"parameters": {
+										"variable": "Touch_Start",
+										"comparison": 2,
+										"value": "Touch.AbsoluteX"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 370510980879472,
+									"parameters": {
+										"first-value": "PlayerBox.X",
+										"comparison": 2,
+										"second-value": "250"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "move-at-angle",
+									"objectClass": "PlayerBox",
+									"sid": 783458257814028,
+									"parameters": {
+										"angle": "0",
+										"distance": "136"
+									}
+								}
+							],
+							"sid": 153721533137605
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 887409107032930
 						}
 					],
 					"actions": [
 						{
 							"id": "set-position",
-							"objectClass": "Syringe",
-							"sid": 856874052371220,
+							"objectClass": "Player_Animation",
+							"sid": 365251233188669,
 							"parameters": {
-								"x": "Self.x",
-								"y": "Self.y + 80 / Smoothness"
+								"x": "PlayerBox.X",
+								"y": "PlayerBox.Y"
 							}
 						}
 					],
-					"sid": 526204479893845
+					"sid": 709446999286269
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "for-each",
+							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 150015122330975,
+							"sid": 256508922175606,
+							"parameters": {
+								"interval-seconds": "Speed * 2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 374717724565224,
+							"parameters": {
+								"object-to-create": "Apple",
+								"layer": "1",
+								"x": "choose(Lane1, Lane2, Lane3)",
+								"y": "-43.5",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "Apple",
+							"sid": 515312844925607,
+							"parameters": {
+								"scale": "3"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 832228462207426,
+							"parameters": {
+								"time-scale": "roundToDp(timescale + 0.02, 2)"
+							}
+						}
+					],
+					"sid": 949242374829538
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 935705921138474,
+							"parameters": {
+								"interval-seconds": "Speed * 4"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 845641946850987,
+							"parameters": {
+								"variable": "Speed",
+								"comparison": 5,
+								"value": "0.25"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 263573668873464,
+							"parameters": {
+								"variable": "Speed",
+								"value": "0.01"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 258536124293777,
+							"parameters": {
+								"variable": "Speed",
+								"value": "roundToDp(Speed, 2)"
+							}
+						}
+					],
+					"sid": 610968371018079,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 389215001012221,
+							"parameters": {
+								"interval-seconds": "Speed "
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 821219220562714,
+							"parameters": {
+								"first-value": "floor(random(4))",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SpawnSyringe",
+							"sid": 344417849285551
+						}
+					],
+					"sid": 772078705537782
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 416611677499467,
+							"parameters": {
+								"interval-seconds": "Speed/Smoothness"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-at-angle",
+							"objectClass": "TiledBackground",
+							"sid": 165860218536897,
+							"parameters": {
+								"angle": "90",
+								"distance": "80 / Smoothness"
+							}
+						}
+					],
+					"sid": 108059241926417,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 868524443836885,
+									"parameters": {
+										"object": "Syringe"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Syringe",
+									"sid": 347513642225765,
+									"parameters": {
+										"x": "Self.x",
+										"y": "Self.y + 80 / Smoothness"
+									}
+								}
+							],
+							"sid": 729196216987567
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 704136902597914,
+									"parameters": {
+										"object": "Apple"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Apple",
+									"sid": 225731723171310,
+									"parameters": {
+										"x": "Self.x",
+										"y": "Self.y + 80 / Smoothness"
+									}
+								}
+							],
+							"sid": 511174299143659,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-screen",
+											"objectClass": "Apple",
+											"sid": 656383252253482,
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Apple",
+											"sid": 208627727512400
+										}
+									],
+									"sid": 812170078858716
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "TiledBackground",
+									"sid": 484464151385098,
+									"parameters": {
+										"comparison": 5,
+										"y-co-ordinate": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "TiledBackground",
+									"sid": 348616192706312,
+									"parameters": {
+										"y": "-1028"
+									}
+								}
+							],
+							"sid": 480361513059598
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerBox",
+							"sid": 299277880926165,
 							"parameters": {
 								"object": "Apple"
 							}
@@ -511,88 +606,58 @@
 					],
 					"actions": [
 						{
-							"id": "set-position",
-							"objectClass": "Apple",
-							"sid": 147334360130334,
+							"type": "comment",
+							"text": "//TODO ADD DEATH FUNCTION"
+						},
+						{
+							"id": "toggle-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 766797871940976,
 							"parameters": {
-								"x": "Self.x",
-								"y": "Self.y + 80 / Smoothness"
+								"variable": "GameEnabled"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Player_Static",
+							"sid": 676106503527784,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Player_Animation",
+							"sid": 536891587663216,
+							"parameters": {
+								"visibility": "invisible"
 							}
 						}
 					],
-					"sid": 251577874600547,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-on-screen",
-									"objectClass": "Apple",
-									"sid": 799650524517616,
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "destroy",
-									"objectClass": "Apple",
-									"sid": 573856448976185
-								}
-							],
-							"sid": 805698854249268
-						}
-					]
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "PlayerBox",
-					"sid": 543488094616875,
-					"parameters": {
-						"object": "Apple"
-					}
-				}
-			],
-			"actions": [
-				{
-					"type": "comment",
-					"text": "//TODO ADD DEATH FUNCTION"
+					"sid": 970754364493515
 				},
 				{
-					"id": "set-time-scale",
-					"objectClass": "System",
-					"sid": 695289131324554,
-					"parameters": {
-						"time-scale": "0"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerBox",
+							"sid": 743642175172076,
+							"parameters": {
+								"object": "Syringe"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Syringe",
+							"sid": 722932025224019
+						}
+					],
+					"sid": 775472849717879
 				}
-			],
-			"sid": 937689959460374
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "PlayerBox",
-					"sid": 807964231496532,
-					"parameters": {
-						"object": "Syringe"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "Syringe",
-					"sid": 718837341837681
-				}
-			],
-			"sid": 102735331915251
+			]
 		},
 		{
 			"functionName": "SpawnSyringe",
@@ -621,10 +686,10 @@
 				{
 					"id": "set-size",
 					"objectClass": "Syringe",
-					"sid": 279116745383442,
+					"sid": 205860554200080,
 					"parameters": {
-						"width": "67.5",
-						"height": "67.5"
+						"width": "81",
+						"height": "81"
 					}
 				}
 			],
