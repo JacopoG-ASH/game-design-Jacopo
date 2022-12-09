@@ -75,6 +75,31 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 886244156913590
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 175783811292302,
+					"parameters": {
+						"audio-file": "game design-main menu",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 934387585280783
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-clicked",
 					"objectClass": "Button",
 					"sid": 907361080845034

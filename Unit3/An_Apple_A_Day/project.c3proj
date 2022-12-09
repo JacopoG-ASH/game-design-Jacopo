@@ -55,6 +55,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Sin",
 			"name": "Sine",
@@ -68,7 +76,8 @@
 		"items": [
 			"Title",
 			"Button",
-			"TiledBackground"
+			"TiledBackground",
+			"Audio"
 		],
 		"subfolders": [
 			{
@@ -122,7 +131,16 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "game design-main menu.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 662536524061656,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
