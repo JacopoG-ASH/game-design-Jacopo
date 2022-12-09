@@ -153,6 +153,17 @@
 					"parameters": {
 						"variable": "GameEnabled"
 					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 926658482074057,
+					"parameters": {
+						"tag": "\"\"",
+						"db": "-100",
+						"duration": "1",
+						"ending": "stop"
+					}
 				}
 			],
 			"sid": 204868023239304

@@ -77,7 +77,10 @@
 			"Title",
 			"Button",
 			"TiledBackground",
-			"Audio"
+			"Audio",
+			"Heart",
+			"GUISyringe",
+			"ScoreText"
 		],
 		"subfolders": [
 			{
